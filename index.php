@@ -1,32 +1,11 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th>ID</th>
+      <th>Name</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
 <?php
 $servername = "localhost";
 $username = "jeffreyn_homework3";
@@ -63,11 +42,12 @@ if ($result->num_rows > 0) {
     ?>
 <tr>
   <td><?=$row["employee_id"]?></td>
-    echo "id: " . $row["employee_id"]. " - Name: " . $row["employee_name"]."<br>";
+  <td><?=$row["employee_name"]?></td>
   }
 } else {
   echo "0 results";
 }
 $conn->close();
 ?>
+  </tbody>
 </table>
