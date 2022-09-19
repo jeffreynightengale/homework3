@@ -35,7 +35,7 @@ if ($result->num_rows > 0) {
   <td><?=$row["customer_name"]?></td>
   <td><?=$row["employee_id"]?></td>
   <td><?=$row["product_name"]?></td>
-  <td><?=$row["product_id"]?></td>
+  <td><?=$row["product_cost"]?></td>
 </tr>
   <?php
     }
