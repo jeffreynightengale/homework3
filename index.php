@@ -18,7 +18,7 @@
 <?php
 $servername = "localhost:3306";
 $username = "jeffreyn_user1";
-$password = "w!eu7^T{Bs[t";
+$password = "8ISr!igSp$Rw";
 $dbname = "jeffreyn_homework3";
     
 // Create connection
