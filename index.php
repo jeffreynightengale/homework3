@@ -38,8 +38,7 @@ if ($result->num_rows > 0) {
 <tr>
   <td><?=$row["employee_id"]?></td>
   <td><?=$row["employee_name"]?></td>
-  }
-    </tr>
+</tr>
   <?php
 } else {
   echo "0 results";
