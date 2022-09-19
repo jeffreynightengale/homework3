@@ -33,7 +33,7 @@ if ($result->num_rows > 0) {
   <td><?=$row["employee_id"]?></td>
   <td><?=$row["employee_name"]?></td>
   <td><?=$row["manager_id"]?></td>
-  <td><a href="managerfile.php" class="link-primary"><input type="click" name="managername"><?=$row["manager_name"]?><br></a></td>
+  <td><input type="click" name="managername"><a href="managerfile.php" class="link-primary"><?=$row["manager_name"]?></a><br></td>
 </tr>
   <?php
     }
