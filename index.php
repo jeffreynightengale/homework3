@@ -2,8 +2,11 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>ID</th>
-      <th>Name</th>
+      <th>Customer ID</th>
+      <th>Customer Name</th>
+      <th>Employee ID</th>
+      <th>Product Name</th>
+      <th>Product Cost</th>
     </tr>
   </thead>
   <tbody>
@@ -20,7 +23,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT employee_id, employee_name FROM Employee";
+$sql = "SELECT customer_id, customer_name, employee_id, product_name, product_cost FROM Customer";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -28,8 +31,11 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
     ?>
 <tr>
+  <td><?=$row["customer_id"]?></td>
+  <td><?=$row["customer_name"]?></td>
   <td><?=$row["employee_id"]?></td>
-  <td><?=$row["employee_name"]?></td>
+  <td><?=$row["product_name"]?></td>
+  <td><?=$row["product_id"]?></td>
 </tr>
   <?php
     }
