@@ -16,7 +16,7 @@
   </thead>
   <tbody>
 <?php
-$servername = "localhost";
+$servername = "localhost:3306";
 $username = "jeffreyn_user1";
 $password = "w!eu7^T{Bs[t";
 $dbname = "jeffreyn_homework3";
