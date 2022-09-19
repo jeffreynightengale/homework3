@@ -17,27 +17,12 @@
   <tbody>
 <?php
 $servername = "localhost";
-$username = "jeffreyn_homework3";
-$password = "MicahNight2001";
+$username = "jeffreyn_user1";
+$password = "GeorgeWash";
 $dbname = "jeffreyn_homework3";
     
 // Create connection
 $conn = new mysqli($servername, $username, $password);
-
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-echo "Connected successfully";
-?>
-<?php
-$servername = "localhost";
-$username = "jeffreyn_homework3";
-$password = "MicahNight2001";
-$dbname = "jeffreyn_homework3";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
