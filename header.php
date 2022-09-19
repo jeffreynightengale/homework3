@@ -18,7 +18,7 @@
           <a class="nav-link active" aria-current="page" href="index.php">Customer Records</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="employees.php">Epmployees</a>
+          <a class="nav-link" href="employees.php">Employees</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="managers.php">Managers</a>
