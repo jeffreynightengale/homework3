@@ -2,7 +2,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>Manager Name: <?php echo $_POST("name"); ?><br></th>
+      <th>Manager Name:</th>
     </tr>
   </thead>
   <tbody>
