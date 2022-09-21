@@ -19,7 +19,8 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT employee_name, manager_name FROM Employee";
+$cid = $_POST["id"];
+$sql = "SELECT employee_name FROM Employee e Where manager =" . $cid;";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
