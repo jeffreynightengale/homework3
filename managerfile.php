@@ -2,7 +2,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th> 's Employees</th>
+      <th> <?php echo $_POST["name"]; ?>'s Employees</th>
     </tr>
   </thead>
   <tbody>
