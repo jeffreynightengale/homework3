@@ -20,7 +20,7 @@ if ($conn->connect_error) {
 }
 
 $cid = $_GET["id"];
-$sql = "SELECT employee_name FROM Employee e Where manager_name =" . $cid;";
+$sql = "SELECT employee_name FROM Employee e Where manager_id =" . $cid;";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
