@@ -27,9 +27,7 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
     ?>
 <tr>
-  if(<?php echo $_POST["manager"]; ?> == manager_name) {
   <td><?=$row["employee_name"]?></td>
-  }
 </tr>
   <?php
     }
