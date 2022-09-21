@@ -36,7 +36,7 @@ if ($result->num_rows > 0) {
   <td><?=$row["manager_name"]?></td>
   <td>
   <form action="managerfile.php" method="post">
-    <input type="hidden" name="id" value="<?=$row["manager_id"]?>"/>
+    <input type="hidden" name="manager" value="<?=$row["manager_name"]?>"/>
     <input type="submit" value="Manager's Employees"/>
   </form>
   </td>
