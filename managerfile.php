@@ -2,7 +2,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><?php $_POST["manager"] ?>'s Employees</th>
+      <th>Employees</th>
     </tr>
   </thead>
   <tbody>
@@ -20,7 +20,7 @@ if ($conn->connect_error) {
 }
 
 $cid = $_POST["id"];
-$sql = "SELECT employee_name FROM Employee e Where manager =" . $cid;";
+$sql = "SELECT employee_name FROM Employee e Where manager_name =" . $cid;";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
