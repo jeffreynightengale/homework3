@@ -34,7 +34,7 @@ if ($result->num_rows > 0) {
   <td><?=$row["employee_name"]?></td>
   <td><?=$row["manager_id"]?></td>
   <form action="managerfile.php" method="post">
-  <td><a href="managerfile.php" class="link-primary" name="manager"><?=$row["manager_name"]?></a></td>
+  <td><a href="managerfile.php" target="_blank"><?=$row>["manager_name"]?></a></td>
   </form>
 </tr>
   <?php
