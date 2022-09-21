@@ -33,7 +33,6 @@ if ($result->num_rows > 0) {
   <td><?=$row["employee_id"]?></td>
   <td><?=$row["employee_name"]?></td>
   <td><?=$row["manager_id"]?></td>
-  <td><?=$row["manager_name"]?></td>
   <td><a href="managerfile.php?id=<?=$row["manager_id"]?>"><?=$row["manager_name"]?></a></td>
 </tr>
   <?php
