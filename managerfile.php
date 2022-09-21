@@ -2,7 +2,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>Manager Name:</th>
+      <th> 's Employees</th>
     </tr>
   </thead>
   <tbody>
