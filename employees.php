@@ -33,8 +33,10 @@ if ($result->num_rows > 0) {
   <td><?=$row["employee_id"]?></td>
   <td><?=$row["employee_name"]?></td>
   <td><?=$row["manager_id"]?></td>
+  <td><?=$row>["manager_name"]?></td>
   <form action="managerfile.php" method="post">
-  <td><a href="managerfile.php" target="_blank"><?=$row>["manager_name"]?></a></td>
+    <input type="hidden" name="id" value="<?=$row["manager_id"]?>"/>
+    <input type="submit" value="Manager's Employees"/>
   </form>
 </tr>
   <?php
