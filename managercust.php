@@ -23,16 +23,10 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 $cid = $_POST['id'];
-echo $iid;
-$sql = "select * from customer c;
-$s = "select * from employee;
-$c = "select * from manager;
+echo $cid;
+$sql = "select * from customer c join employee e on c.employeeid = e.employeeid join manager m on e.managerid = m.managerid where m.manager_id=" . $cid;
 echo $sql;
-echo $s;
-echo $c;
     $result = $conn->query($sql);
-    $result = $conn->query($s);
-    $result = $conn->query($c);
 
 if ($result->num_rows > 0) {
   // output data of each row
