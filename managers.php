@@ -34,6 +34,12 @@ if ($result->num_rows > 0) {
   <td><?=$row["manager_name"]?></td>
   <td><?=$row["supervisor_id"]?></td>
   <td><?=$row["supervisor_name"]?></td>
+   <td>
+      <form method="post" action="managercust.php">
+        <input type="hidden" name="id" value="<?=$row["manager_id"]?>" />
+        <input type="submit" value="Manager Sells" />
+      </form>
+    </td>
 </tr>
   <?php
     }
