@@ -24,7 +24,7 @@ if ($conn->connect_error) {
 }
 $cid = $_POST['id'];
 echo $cid;
-$sql = "select * from customer c join employee e on c.employee_id = e.employee_id join manager m on e.manager_id = m.manager_id where m.manager_id=" . $cid;
+$sql = "select * from customer c join employee e on c.employee_id = e.employee_id join manager m on e.manager_id = m.manager_id where e.manager_id=" . $cid;
 echo $sql;
     $result = $conn->query($sql);
 
