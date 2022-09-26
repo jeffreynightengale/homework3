@@ -23,9 +23,9 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 $cid = $_POST['id'];
-//echo $iid;
+echo $iid;
 $sql = "select c.customer_name, c.product_name, c.product_cost, m.manager_name from customer c join employee e on c.customer_id = e.customer_id join manager m on e.manager_id = m.manager_id where m.manager_id=" . $cid;
-//echo $sql;
+echo $sql;
     $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
