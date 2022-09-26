@@ -21,7 +21,7 @@ if ($conn->connect_error) {
 }
 $cid = $_POST["id"];
 //echo $iid;
-$sql = "select manager_name from manager m where m.supervisor_id=" . $cid;
+$sql = "select manager_name from Manager m where m.supervisor_id=" . $cid;
 //echo $sql;
     $result = $conn->query($sql);
 
