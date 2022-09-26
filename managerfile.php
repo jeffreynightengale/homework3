@@ -19,7 +19,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$cid = $_GET["id"];
+$cid = $_POST["id"];
 $sql = "SELECT employee_name FROM Employee e Where manager_id =" . $cid;
 $result = $conn->query($sql);
 
