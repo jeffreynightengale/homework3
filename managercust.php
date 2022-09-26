@@ -24,9 +24,15 @@ if ($conn->connect_error) {
 }
 $cid = $_POST['id'];
 echo $iid;
-$sql = "select c.customer_name, c.product_name, c.product_cost, m.manager_name from customer c join employee e on c.customer_id = e.customer_id join manager m on e.manager_id = m.manager_id where m.manager_id=" . $cid;
+$sql = "select * from customer c;
+$s = "select * from employee;
+$c = "select * from manager;
 echo $sql;
+echo $s;
+echo $c;
     $result = $conn->query($sql);
+    $result = $conn->query($s);
+    $result = $conn->query($c);
 
 if ($result->num_rows > 0) {
   // output data of each row
