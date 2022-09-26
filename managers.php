@@ -34,12 +34,6 @@ if ($result->num_rows > 0) {
   <td><?=$row["manager_name"]?></td>
   <td><?=$row["supervisor_id"]?></td>
   <td><?=$row["supervisor_name"]?></td>
-   <td>
-      <form method="post" action="supervisorfile.php">
-        <input type="hidden" name="id" value="<?=$row["supervisor_id"]?>" />
-        <input type="submit" value="Supervisor's Managers" />
-      </form>
-    </td>
 </tr>
   <?php
     }
