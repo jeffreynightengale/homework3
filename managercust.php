@@ -23,7 +23,6 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 $cid = $_POST['id'];
-echo $cid;
 $sql = "select * from Customer c join Employee e on c.employee_id = e.employee_id join Manager m on e.manager_id = m.manager_id where m.manager_id=" . $cid;
     $result = $conn->query($sql);
 
@@ -32,7 +31,7 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
 ?>
   <tr>
-    <td><?=$row["customer_id"]?></td>
+    <td><?=$row["customer_name"]?></td>
     <td><?=$row["product_name"]?></td>
     <td><?=$row["product_cost"]?></td>
     <td><?=$row["manager_name"]?></td>
