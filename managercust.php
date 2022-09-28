@@ -1,15 +1,6 @@
 <?php require_once("header.php"); ?>
 <h1>Manager Sells</h1>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Customer Name</th>
-      <th>Product</th>
-      <th>Product Cost</th>
-      <th>Manager Name</th>
-    </tr>
-  </thead>
-  <tbody>
+<div class="card-group">
     <?php
 $servername = "localhost:3306";
 $username = "jeffreyn_user1";
@@ -22,20 +13,35 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-$cid = $_POST['id'];
-$sql = "select * from Customer c join Employee e on c.employee_id = e.employee_id join Manager m on e.manager_id = m.manager_id where m.manager_id=" . $cid;
+
+$sql = "select manager_id, manager_name from Manager";
     $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
 ?>
-  <tr>
-    <td><?=$row["customer_name"]?></td>
-    <td><?=$row["product_name"]?></td>
-    <td><?=$row["product_cost"]?></td>
-    <td><?=$row["manager_name"]?></td>
-  </tr>
+   <div class="card">
+    <div class="card-body">
+      <h5 class="card-title"><?=$row["manager_name"]?></h5>
+      <p class="card-text"><ul>
+<?php
+    $section_sql = "select c.product_name, c.product_price from ?>
+   <div class="card">
+    <div class="card-body">
+      <h5 class="card-title"><?=$row["instructor_name"]?></h5>
+      <p class="card-text"><ul>
+<?php
+    $section_sql = "select c.description from Customer c join Employee e on e.employee_id = c.employee_id join manager on e.manager_id = m.manager_id where m.manager row["instructor_id"];
+    $section_result = $conn->query($section_sql);
+    
+    while($section_row = $section_result->fetch_assoc()) {
+      echo "<li>" . $section_row["description"] . "</li>";
+    }
+?>
+      </ul></p>
+  </div>
+    </div>
 <?php
   }
 } else {
