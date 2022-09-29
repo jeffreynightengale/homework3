@@ -1,5 +1,5 @@
 <?php require_once("header.php"); ?>
-<h1>Manager Sells</h1>
+<h1>Manager's Customers</h1>
 <div class="card-group">
     <?php
 $servername = "localhost:3306";
