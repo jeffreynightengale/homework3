@@ -26,7 +26,7 @@ if ($result->num_rows > 0) {
       <h5 class="card-title"><?=$row["manager_name"]?></h5>
       <p class="card-text"><ul>
 <?php
-    $section_sql = "select customer_name from Customer c join Employee e on e.employee_id = c.employee_id join Manager on e.manager_id = m.manager_id where m.manager=" . $row["manager_id"];
+    $section_sql = "select customer_name from Customer c join Employee e on e.employee_id = c.employee_id join Manager m on e.manager_id = m.manager_id where m.manager=" . $row["manager_id"];
     $section_result = $conn->query($section_sql);
     
     while($section_row = $section_result->fetch_assoc()) {
